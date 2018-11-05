@@ -1,0 +1,899 @@
+@font-face {
+  font-family: 'Nexa Black';
+  src: url('../fonts/nexa_black.ttf') /* TTF file for CSS3 browsers */
+}
+
+@font-face {
+  font-family: 'Nexa Regular';
+  src: url('../fonts/nexa_regular.ttf') /* TTF file for CSS3 browsers */
+}
+
+body {
+	overflow: hidden;
+}
+
+:focus {
+	outline: none;
+}
+
+#phone {
+	display: none;
+  position: absolute;
+  bottom: 5px;
+  right: 55px;
+  font-family: Nexa Regular;
+  font-size: 14px;
+  text-shadow: 2px;
+  color: black;
+  text-shadow: 1px -1px 2px grey;
+  width: 250px;
+  height: 535px;
+  background-image: url('../img/phone.png');
+}
+
+#screen {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 235px;
+  height: 430px;
+  overflow: hidden;
+}
+
+.status-bar {
+	width : 100%;
+	height: 16px;
+	background-color: rgba(183, 183, 183, 0.13);
+}
+
+.app {
+	width: 100%;
+	height: 414px;
+}
+
+.app-inner {
+	display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+	max-height: 100%;
+	padding: 5px 5px;
+	overflow: hidden;
+}
+
+.status-bar {
+  width: inherit;
+  line-height: 20px;
+  font-size: 11px;
+  text-align: left;
+  font-family: Nexa Regular;
+  color: #ddd;
+  z-index: 101
+  background-color: rgba(183, 183, 183, 0.13);
+}
+
+.status-bar ul.signal {
+    float: left;
+    margin: 3px 3px 0 -35px;
+    position: relative;
+    height: 10px;
+    width: 14px
+}
+
+.status-bar ul.signal li {
+    float: left;
+    display: block;
+    width: 2px;
+    margin: 0 1px 0 0;
+    background: #ddd;
+    position: absolute;
+    bottom: 0
+}
+
+.status-bar ul.signal li:nth-child(1) {
+    height: 2px
+}
+
+.status-bar ul.signal li:nth-child(2) {
+    height: 3px;
+    margin-left: 3px
+}
+
+.status-bar ul.signal li:nth-child(3) {
+    height: 5px;
+    margin-left: 6px
+}
+
+.status-bar ul.signal li:nth-child(4) {
+    height: 7px;
+    margin-left: 9px;
+    background: #8a8a8a;
+}
+
+.status-bar ul.signal li:nth-child(5) {
+    height: 9px;
+    margin-left: 12px;
+    background: #8a8a8a;
+}
+
+.status-bar ul.signal li.no-signal {
+    height: 1px
+}
+
+.status-bar div.time {
+  margin-top: -20px;
+  margin-left: 100px;
+}
+
+.status-bar .battery {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    width: 16px;
+    height: 9px;
+}
+
+.status-bar .battery .percentage {
+    position: absolute;
+    top: -4px;
+    left: -25px
+}
+
+.status-bar .battery i {
+    width: 1px;
+    height: 3px;
+    position: absolute;
+    top: 2px;
+    right: -3px;
+    border: 1px solid #ddd
+}
+
+.status-bar .icons .right {
+    position: absolute;
+    width: 94px;
+    height: 40px;
+    top: -11px;
+    right: 70px
+}
+
+/* App : Home */
+
+#app-home .menu-icon {
+	width: 52px;
+	height: 52px;
+	padding: 2px;
+}
+
+#app-home .menu-icon .counter {
+	position: relative;
+	display: inline-block;
+  background: #FF0000;
+  border-radius: 90px;
+  min-width: 16px;
+  height: 14px;
+  color: #FFF;
+  text-align: center;
+  margin-top: -50px;
+  margin-left: 30px;
+  padding: 1px;
+  font-family: Nexa Regular;
+  border: 1px solid #FFF;
+}
+
+#app-home .menu-icon-inner {
+  transform: translateX(-50%);
+  margin-left: 50%;
+	width: 32px;
+	height: 32px;
+	border-radius: 5px;
+}
+
+#app-home .menu-icon-label {
+	font-size: 0.7em;
+	color: #FFF;
+	margin-top: 2px;
+	text-align: center;
+	font-family: Nexa Regular;
+}
+
+#app-home .menu-icon i {
+	width: 32px;
+	height: 32px;
+	margin-left: 16px;
+	margin-top: 16px;
+  transform: translate(-16px, -8px);
+  color: #FFF;
+  font-size: 1.2em;
+}
+
+#app-home .menu-icon-contacts .menu-icon-inner {
+	background-image: url("../img/apps/contacts.png");
+}
+
+#app-home .menu-icon-messages .menu-icon-inner {
+	background-image: url("https://cdn.discordapp.com/attachments/394961715424395266/434462541188431892/rsz_facebook-messenger.png");
+}
+
+#app-home .menu-icon-bank .menu-icon-inner {
+	background-image: url("../img/apps/nordea.png");
+}
+
+#app-home .menu-icon-taxi .menu-icon-inner {
+	background-image: url("../img/apps/taxi.png");
+}
+
+#app-home .menu-icon-mecano .menu-icon-inner {
+	background-image: url("../img/apps/meko.png");
+}
+
+#app-home .menu-icon-ambulance .menu-icon-inner {
+	background-image: url("../img/apps/amb.png");
+}
+
+#app-home .menu-icon-police .menu-icon-inner {
+	background-image: url('../img/apps/polis.png');
+}
+
+#app-home .menu-icon-sherif .menu-icon-inner {
+	background-image: url("https://cdn.discordapp.com/attachments/394961715424395266/434462541188431892/rsz_facebook-messenger.png");
+}
+
+#app-home .menu-icon-deepweb .menu-icon-inner {
+	background-image: url("https://cdn.discordapp.com/attachments/394961715424395266/434462541188431892/rsz_facebook-messenger.png");
+}
+
+#app-home .menu-icon-insurer .menu-icon-inner {
+	background-image: url("https://cdn.discordapp.com/attachments/394961715424395266/434462541188431892/rsz_facebook-messenger.png");
+}
+
+#app-home .menu-icon-lawyer .menu-icon-inner {
+	background-image: url("https://cdn.discordapp.com/attachments/394961715424395266/434462541188431892/rsz_facebook-messenger.png");
+}
+
+#app-home .menu-icon-unemployed .menu-icon-inner {
+	background-image: url("https://cdn.discordapp.com/attachments/394961715424395266/434462541188431892/rsz_facebook-messenger.png");
+}
+
+#app-home .menu-icon-cardealer .menu-icon-inner {
+	background-image: url("../img/apps/cardealer.png");
+}
+
+#app-home .menu-icon-grocer .menu-icon-inner {
+	background-image: url("https://cdn.discordapp.com/attachments/394961715424395266/434462541188431892/rsz_facebook-messenger.png");
+}
+
+#app-home .menu-icon-governor .menu-icon-inner {
+	background-image: url("https://cdn.discordapp.com/attachments/394961715424395266/434462541188431892/rsz_facebook-messenger.png");
+}
+
+#app-home .menu-icon-realestateagent .menu-icon-inner {
+	background-image: url("https://cdn.discordapp.com/attachments/394961715424395266/434462541188431892/rsz_facebook-messenger.png");
+}
+
+#app-home .menu-icon-journalist .menu-icon-inner {
+	background-image: url("../img/apps/news.png");
+}
+
+#app-home .menu-icon-lscustom .menu-icon-inner {
+	background-image: url("https://cdn.discordapp.com/attachments/394961715424395266/434462541188431892/rsz_facebook-messenger.png");
+}
+
+#app-home .menu-icon-teamster .menu-icon-inner {
+	background-image: url("https://cdn.discordapp.com/attachments/394961715424395266/434462541188431892/rsz_facebook-messenger.png");
+}
+
+#app-home .menu-icon-tatoo .menu-icon-inner {
+	background-image: url("https://cdn.discordapp.com/attachments/394961715424395266/434462541188431892/rsz_facebook-messenger.png");
+}
+
+#app-home .menu-icon-leboncoin .menu-icon-inner {
+	background-image: url("https://cdn.discordapp.com/attachments/394961715424395266/434462541188431892/rsz_facebook-messenger.png");
+}
+
+
+/* App : Messages */
+
+#app-messages {
+	color: #FFF;
+}
+
+#app-messages .contact-list {
+	width: 100%;
+}
+
+#app-messages .contact {
+	padding: 1px;
+	width: 215px;
+}
+
+#app-messages .contact.selected .contact-name {
+	color: rgba(255, 131, 0, 0.8);
+	font-family: Nexa Black;
+}
+
+#app-messages .contact:nth-child(odd) {
+	background-color: rgba(162, 162, 162, 0.61);
+}
+
+#app-messages .contact:nth-child(even) {
+	background-color: rgba(58, 58, 58, 0.61);
+}
+
+
+#app-messages .contact-name {
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#app-messages .unread {
+	display: inline-block;
+	border-radius: 90px;
+	background-color: rgba(255, 131, 0, 0.6392156862745098);
+	color: #FFF;
+	min-width: 16px;
+	min-height: 16px;
+	padding: 3px;
+	text-align: center;
+}
+
+/* App : Incoming Call */
+
+#app-incoming-call {
+	background-image: url('../img/bg-call.png');
+}
+
+#app-incoming-call .contact-infos {
+	width: 100%;
+	height: 50%;
+	color: #FFF;
+}
+
+#app-incoming-call .contact-infos .contact-name {
+	position: absolute;
+	text-align: center;
+	top: 25%;
+	font-size: 26px;
+	font-family: Nexa Black;
+	width: 100%;
+}
+
+#app-incoming-call .contact-infos .contact-number {
+	position: absolute;
+	text-align: center;
+	top: 35%;
+	font-size: 16px;
+	width: 100%;
+}
+
+#app-incoming-call .contact-infos .contact-number:before {
+	content: '';
+}
+
+#app-incoming-call .contact-actions-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  margin-left: -5px;
+}
+
+#app-incoming-call .contact-action {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+#app-incoming-call .contact-action i {
+  font-size: 25px;
+  border-radius: 90px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  color: #FFF;
+}
+
+#app-incoming-call .contact-action.action-accept i {
+  background-color: rgba(0, 202, 91, 0.85);
+}
+
+#app-incoming-call .contact-action.action-deny i {
+  background-color: rgba(204, 0, 0, 0.65);
+}
+
+/* App : Contacts */
+
+#app-contacts {
+	background-color: rgba(58, 58, 58, 0.16);
+	color: #FFF;
+}
+
+#app-contacts .contact-actions div {
+  padding: 1px;
+  width: 150px;
+  font-family: Nexa Regular;
+  color: rgb(43, 43, 43);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 35px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-style: solid;
+  border-color: rgba(rgba(64, 64, 64, 0.77));
+  border-width: 0.5px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#app-contacts .contact-actions div.selected {
+	color: white;
+	font-family: Nexa Regular;
+	font-size: 14px;
+	background-color: rgb(0, 156, 85);
+	border-style: solid;
+  	border-color: rgba(rgba(64, 64, 64, 0.27));
+  	border-width: 0.5px;
+  	border-radius: 8px;
+}
+
+#app-contacts .contact-list, #app-contacts .contact-me {
+	width: 100%;
+}
+
+#app-contacts .contact {
+	padding: 1px;
+	width: 215px;
+}
+
+#app-contacts .contact.selected {
+	color: rgb(250, 252, 251);
+	font-family: Nexa Black;
+	background-color: rgb(0, 156, 85);
+	border-style: solid;
+  	border-color: rgba(rgba(64, 64, 64, 0.27));
+  	border-width: 0.5px;
+  	border-radius: 5px;
+}
+
+#app-contacts .contact-list .contact:nth-child(odd) {
+	background-color: rgba(183, 183, 183, 0.13);
+}
+
+#app-contacts .contact-list .contact:nth-child(even) {
+	background-color: rgba(121, 121, 121, 0.58);
+}
+
+
+#app-contacts .contact-name, #app-contacts .contact-number {
+	display: inline-block;
+}
+
+#app-contacts .contact-number {
+	float: right;
+}
+
+#app-contacts .contact-number:before{
+	content: '#';
+}
+
+/* App : Contact Add */
+
+#app-contact-add {
+	background-color: rgba(58, 58, 58, 0.16);
+}
+
+#app-contact-add .add-contact-wrapper {
+	width: 100%;
+}
+
+#app-contact-add .add-contact-wrapper div {
+	width: 100%;
+}
+
+#app-contact-add .add-contact-wrapper div input {
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.91);
+	border-radius: 7px;
+	font-size: 14px;
+	font-family: Nexa Regular;
+	padding-left: 10px;
+}
+
+/* App : Contact Actions */
+
+#app-contact-actions {
+	background-color: rgba(58, 58, 58, 0.16);
+}
+
+#app-contact-actions .contact-infos {
+	width: 100%;
+	height: 50%;
+	color: #FFF;
+}
+
+#app-contact-actions .contact-infos .contact-name {
+	position: absolute;
+	text-align: center;
+	top: 25%;
+	font-size: 26px;
+	font-family: Nexa Black;
+	width: 100%;
+}
+
+#app-contact-actions .contact-infos .contact-number {
+	position: absolute;
+	text-align: center;
+	top: 35%;
+	font-size: 18px;
+	width: 100%;
+}
+
+#app-contact-actions .contact-infos .contact-number:before {
+	content: '';
+}
+
+#app-contact-actions .contact-actions-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  margin-left: -5px;
+}
+
+#app-contact-actions .contact-action.action-call {
+	flex-basis: 30%;
+	text-align: center;
+	margin-left: 5%;
+}
+
+#app-contact-actions .contact-action.action-call i {
+  font-size: 24px;
+  background-color: rgba(0, 204, 92, 0.85);
+  border-radius: 90px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: #FFF;
+}
+
+#app-contact-actions .contact-action.action-message {
+	flex-basis: 30%;
+	text-align: center;
+}
+
+#app-contact-actions .contact-action.action-message i {
+  font-size: 24px;
+  background-color: rgba(243, 192, 0, 0.85);
+  border-radius: 90px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: #FFF;
+}
+
+#app-contact-actions .contact-action.action-remove {
+	flex-basis: 30%;
+	text-align: center;
+}
+
+#app-contact-actions .contact-action.action-remove i {
+  font-size: 24px;
+  background-color: rgba(204, 0, 0, 0.65);
+  border-radius: 90px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+}
+
+/* App : Contact Action Call */
+
+@keyframes circle-light-1 {
+	0%   { color: #B4CEFF; }
+	25%  { color: #FFFFFF; }
+	50%  { color: #005AFF; }
+	75%  { color: #3079FF; }
+	100% { color: #6A9FFF; }
+}
+
+@keyframes circle-light-reverse-1 {
+	0%   { color: #6A9FFF; }
+	25%  { color: #3079FF; }
+	50%  { color: #005AFF; }
+	75%  { color: #FFFFFF; }
+	100% { color: #B4CEFF; }
+}
+
+@keyframes circle-light-2 {
+	0%   { color: #3079FF; }
+	25%  { color: #6A9FFF; }
+	50%  { color: #B4CEFF; }
+	75%  { color: #FFFFFF; }
+	100% { color: #005AFF; }
+}
+
+@keyframes circle-light-reverse-2 {
+	0%   { color: #005AFF; }
+	25%  { color: #FFFFFF; }
+	50%  { color: #B4CEFF; }
+	75%  { color: #6A9FFF; }
+	100% { color: #3079FF; }
+}
+
+@keyframes circle-light-3 {
+	0%   { color: #005AFF; }
+	25%  { color: #3079FF; }
+	50%  { color: #6A9FFF; }
+	75%  { color: #B4CEFF; }
+	100% { color: #FFFFFF; }
+}
+
+@keyframes circle-light-reverse-3 {
+	0%   { color: #FFFFFF; }
+	25%  { color: #B4CEFF; }
+	50%  { color: #6A9FFF; }
+	75%  { color: #3079FF; }
+	100% { color: #005AFF; }
+}
+
+#app-contact-action-call {
+	background-image: url('../img/bg-call.png');
+}
+
+#app-contact-action-call .contact-infos {
+	width: 100%;
+	height: 50%;
+	color: #FFF;
+}
+
+#app-contact-action-call .contact-infos .contact-name {
+	position: absolute;
+	text-align: center;
+	top: 25%;
+	font-size: 28px;
+	width: 100%;
+}
+
+#app-contact-action-call .contact-infos .contact-number {
+	position: absolute;
+	text-align: center;
+	top: 35%;
+	font-size: 18px;
+	width: 100%;
+}
+
+#app-contact-action-call .contact-infos .contact-number:before{
+	content: '';
+}
+
+#app-contact-action-call .loader {
+	width: 100%;
+	height: 50%;
+}
+
+#app-contact-action-call .loader .circle {
+	position: absolute;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+#app-contact-action-call .loader .circle i {
+	color: #005AFF;
+}
+
+#app-contact-action-call .loader .circle:nth-child(1) {
+	top: 50%;
+}
+
+#app-contact-action-call .loader .circle:nth-child(1) i {
+	animation: circle-light-1 1s infinite, circle-light-reverse-1 1s infinite;
+}
+
+#app-contact-action-call .loader .circle:nth-child(2) {
+	top: 60%;
+	animation: circle-light-2 1s infinite, circle-light-reverse-2 1s infinite;
+}
+
+#app-contact-action-call .loader .circle:nth-child(2) i {
+	animation: circle-light-2 1s infinite, circle-light-reverse-2 1s infinite;
+}
+
+
+#app-contact-action-call .loader .circle:nth-child(3) {
+	top: 70%;
+	animation: circle-light-3 1s infinite, circle-light-reverse-3 1s infinite;
+}
+
+#app-contact-action-call .loader .circle:nth-child(3) i {
+	animation: circle-light-3 1s infinite, circle-light-reverse-3 1s infinite;
+}
+
+#app-contact-action-call .loader .info {
+	position: absolute;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	top: 85%;
+	color: #FFF;
+	font-size: 24px;
+	text-align: center;
+}
+
+#app-contact-action-call.online .loader .circle {
+	display: none;
+}
+
+/* App : Contact Action Message */
+
+#app-contact-action-message {
+	background-image: url('../img/bg-call.png');
+	color: #FFF;
+}
+
+#app-contact-action-message .message-container  {
+	width: 100%;
+	min-height: 305px;
+}
+
+#app-contact-action-message .message-container .time {
+	width: 100%;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+#app-contact-action-message .message-container .message {
+	border: 1px solid #FFF;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 20px 20px 0 20px;
+	background-color: #eaf5ff;
+	width: 75%;
+	margin-left: 10%;
+	color: #000;
+}
+
+#app-contact-action-message .message-container .message.self {
+	background-color: rgba(0, 185, 24, 0.88);
+	margin-left: 0;
+	border-radius: 20px 20px 20px 0;
+	color: #FFF;
+}
+
+#app-contact-action-message .message-input {
+	width: 100%;
+}
+
+#app-contact-action-message .message-input textarea[name="message"] {
+	width: 100%;
+	height: 70px;
+	padding-left: 9px;
+	color: rgb(47, 47, 47);
+	background-color: rgba(220, 220, 220, 0.63);
+	border-radius: 10px;
+}
+
+#app-contact-action-message .message-input textarea[name="message"].typing {
+	border: 1px solid rgba(0, 185, 50, 0.63);
+	font-size: 14px;
+	font-family: Nexa Regular;
+}
+
+#app-contact-action-message .message-actions {
+	height: 40px;
+	border-radius: 10px;
+}
+
+/* App : Bank */
+
+#app-bank {
+	background-color: rgba(183, 183, 183, 0.33);
+}
+
+#app-bank .app-inner {
+	height: 400px;
+}
+
+#app-bank .logo {
+  width: 100%;
+  text-align: center;
+	margin-top: 20px;
+}
+
+#app-bank .balance {
+	width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  color: #25ff00;
+  font-size: 28px;
+}
+
+#app-bank .balance:after {
+	content: ' SEK';
+  font-size: 20px;
+}
+
+#app-bank .balance.positive:before {
+	content: '+ ';
+}
+
+#app-bank .balance.negative:before {
+	content: '- ';
+}
+
+#app-bank .button-container {
+	width: 100%;
+	margin-bottom: 85px;
+	display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+#app-bank .button {
+	width: 80%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #061944;
+	color: #FFF;
+	bottom: 0;
+	margin: 5px;
+}
+
+#app-bank .button.selected {
+	background-color: #061944;
+
+}
+
+/* App : Bank Transfer */
+
+#app-bank-transfer {
+	background-color: rgba(183, 183, 183, 0.33);
+	color: #000;
+}
+
+#app-bank-transfer .contact {
+	padding: 1px;
+	width: 215px;
+	color: #FFF;
+}
+
+#app-bank-transfer .contact.selected {
+	color: #a22626;
+	font-family: Nexa Black;
+}
+
+#app-bank-transfer .contact:not(:last-child) {
+	border-bottom: 0px solid #CCC;
+}
+
+/* App : Bank Transfer Menu */
+
+#app-bank-transfer-menu {
+	background-color: rgba(83, 213, 253, 0.23);
+}
+
+#app-bank-transfer-menu .transfer-wrapper {
+	width: 100%;
+  margin-top: 35px;
+  transform: translateY(-50%);
+  border-radius: 10px;
+}
+
+#app-bank-transfer-menu .transfer-wrapper div {
+	width: 100%;
+}
+
+#app-bank-transfer-menu .transfer-wrapper div input {
+	width: 100%;
+	height: 50px;
+	border-radius: 8px;
+	padding-left: 10px;
+	color: green;
+	font-size: 18px;
+	font-family: Nexa Black;
+}
